@@ -25,6 +25,8 @@ setup(
         'console_scripts': [
             'talker = mypkg.talker:main',
             'listener = mypkg.listener:main',
+            'publisher = mypkg.publisher:main',
+            'subscriber = mypkg.subscriber:main',
         ],
     },
 )
