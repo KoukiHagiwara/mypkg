@@ -23,7 +23,7 @@ class PublisherNode(Node):
         msg.range_max = 2.0
 
         self.publisher_.publish(msg)
-        self.get_logger().info('Published scan data')
+        
 
 def main(args=None):
     rclpy.init(args=args)

@@ -28,7 +28,6 @@ class SubscriberNode(Node):
             self.alert_publisher.publish(alert_msg)
             self.get_logger().warn(alert_msg.data)
 
-
 def main(args=None):
     rclpy.init(args=args)
     node = SubscriberNode()

@@ -10,3 +10,17 @@ timeout 10 ros2 launch mypkg talk_listen.launch.py | tee -  /tmp/mypkg.log
 
 cat /tmp/mypkg.log |
 grep 'Listen: 10'	
+
+timeout 15 ros2 launch mypkg obstacle_alert.launch.py | tee - /tmp/obstacle_alert.log 
+
+# サブスクライバーノードのアラートメッセージを監視
+ALERT_COUNT=0
+while [ "$ALERT_COUNT" -lt 10 ]; do
+    ALERT_COUNT=$((ALERT_COUNT + 1))
+done
+
+
+cat /tmp/obstacle_alert.log 
+	
+
+
