@@ -1,14 +1,19 @@
 # mypkg
 ロボットシステム学のROS2パッケージ
 
-#障害物検知アラートノード
+# 障害物検知アラートノード
 [![test](https://github.com/KoukiHagiwara/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/KoukiHagiwara/mypkg/actions/workflows/test.yml)
+
 ROS2を使用してロボットの障害物検知を行うことを想定して作成したものです。
 ロボットの前方にある障害物を検出し、指定した距離内に障害物が存在する場合、警告メッセージを出します。
 - Transmitter(パブリッシャノード)
+
 ランダムな距離データを生成して送信します。
+
 - Detection(サブスクライバノード)
+
 パブリッシャから受信した距離データを解析し、障害物が一定距離の範囲内に入った場合に警告メッセージを出します。
+
 ##実行方法
 launchファイルを実行してパブリッシャノードとサブスクライバノードが正しく動いているのかを確認します。
 ```
