@@ -6,14 +6,14 @@ def generate_launch_description():
         # Publisher Node
         Node(
             package='mypkg',  # パッケージ名
-            executable='publisher',  # setup.py で定義したエントリポイント
-            name='publisher',  # ノード名
+            executable='transmitter',  # setup.py で定義したエントリポイント
+            name='transmitter',  # ノード名
         ),
         # Subscriber Node
         Node(
             package='mypkg',  # パッケージ名
-            executable='subscriber',  # setup.py で定義したエントリポイント
-            name='subscriber',  # ノード名
+            executable='detection',  # setup.py で定義したエントリポイント
+            name='detection',  # ノード名
             output='screen',  # 出力をターミナルに表示
         ),
     ])

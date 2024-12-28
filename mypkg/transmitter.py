@@ -3,13 +3,13 @@ from rclpy.node import Node
 from sensor_msgs.msg import LaserScan
 import random
 
-class PublisherNode(Node):
+class Transmitter(Node):
     def __init__(self):
-        super().__init__("publisher")
+        super().__init__("transmitter")
         self.publisher_ = self.create_publisher(LaserScan, "scan", 10)
-        self.timer = self.create_timer(1.0, self.publish_scan_data)  # 毎秒1回
+        self.timer = self.create_timer(1.0, self.transmit_scan_data)  # 毎秒1回
 
-    def publish_scan_data(self):
+    def transmit_scan_data(self):
         msg = LaserScan()
         msg.header.stamp = self.get_clock().now().to_msg()
         msg.header.frame_id = 'laser_frame'
@@ -27,5 +27,5 @@ class PublisherNode(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    node = PublisherNode()
+    node = Transmitter()
     rclpy.spin(node)

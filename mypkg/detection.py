@@ -4,9 +4,9 @@ from sensor_msgs.msg import LaserScan
 from std_msgs.msg import String
 
 
-class SubscriberNode(Node):
+class Detection(Node):
     def __init__(self):
-        super().__init__("subscriber")
+        super().__init__("detection")
         self.subscription = self.create_subscription(
             LaserScan,
             'scan',
@@ -15,7 +15,6 @@ class SubscriberNode(Node):
         )
         self.alert_publisher = self.create_publisher(String, "obstacle_alert", 10)
         self.threshold_distance = 0.5  # アラートの閾値 (単位: メートル)
-        self.get_logger().info('Subscriber Node has been started')
 
     def scan_callback(self, msg):
         # スキャンデータ内の最小距離を取得
@@ -30,6 +29,6 @@ class SubscriberNode(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    node = SubscriberNode()
+    node = Detection()
     rclpy.spin(node)
     
