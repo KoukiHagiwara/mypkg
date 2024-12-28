@@ -32,7 +32,8 @@ $ ros2 launch mypkg obstacle_alert.launch.py
 - Python 3.10
 - Ubuntu 22.04 LTS
 - ROS2 humble
-- `ryuichiueda/ubuntu22.04-ros2:latest`
+## テストに使用したコンテナ
+- `docker pull ryuichiueda/ubuntu22.04-ros2:latest`
 # ライセンス
 - このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
 - このパッケージのコードは，下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを，本人の許可を得て自身の著作としたものです．
