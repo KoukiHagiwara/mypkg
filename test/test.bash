@@ -15,6 +15,6 @@ grep 'Listen: 10'
 
 
 # 10秒間実行して、ログを取得
-timeout 15 ros2 run mypkg transmitter | tee /tmp/transmitter.log
+timeout 15 ros2 run mypkg obstacle_alert | tee /tmp/obstacle_alert.log
 
-cat /tmp/transmitter.log
+cat /tmp/obstacle_alert.log

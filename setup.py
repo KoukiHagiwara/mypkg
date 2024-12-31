@@ -25,8 +25,7 @@ setup(
         'console_scripts': [
             'talker = mypkg.talker:main',
             'listener = mypkg.listener:main',
-            'transmitter = mypkg.transmitter:main',
-            'detection = mypkg.detection:main',
+            'obstacle_alert = mypkg.obstacle_alert:main',
         ],
     },
 )

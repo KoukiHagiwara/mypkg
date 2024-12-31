@@ -6,9 +6,9 @@ from rclpy.node import Node
 from sensor_msgs.msg import LaserScan
 import random
 
-class ObstacleDetectionPublisher(Node):
+class obstacle_alert(Node):
     def __init__(self):
-        super().__init__("obstacle_detection_publisher")
+        super().__init__("obstacle_alert")
         self.publisher_ = self.create_publisher(LaserScan, "scan", 10)
         self.timer = self.create_timer(1.0, self.publish_scan_data)
         self.threshold_distance = 0.5
@@ -43,5 +43,5 @@ class ObstacleDetectionPublisher(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    node = ObstacleDetectionPublisher()
+    node = obstacle_alert()
     rclpy.spin(node)
