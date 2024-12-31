@@ -22,7 +22,7 @@ $ colcon build
 $ source ~/.bashrc
 ```
 ```
-$ ros2 run mypkg obstacle_alert.py
+$ ros2 run mypkg obstacle_alert
 ```
 # 動作環境
 - Python 3.10
