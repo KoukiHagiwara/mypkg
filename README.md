@@ -24,6 +24,8 @@ $ source ~/.bashrc
 ```
 $ ros2 run mypkg obstacle_alert
 ```
+トピック名はobstacle_alertとする。
+
 # 動作環境
 - Python 3.10
 - Ubuntu 22.04 LTS
